@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <meta charset="utf-8" />
+    <script src="scripts/jquery-3.3.1.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            //var arr = new Array();
+            //arr[0] = 123;
+            //arr[1] = "abc";
+            //arr[5] = false;
+            //for (var i = 0; i < arr.length; i++) {
+            //    alert(arr[i]);
+            //}
+
+            //新建数组最简单的方式
+            var arr1 = [];
+            arr1.push(111);
+            arr1.push(222);
+            arr1.push("333");
+            arr1.push(false);
+
+            $('#btn').click(function () {
+                //执行ajax
+                $.ajax({
+                    type: "post",
+                    url: "Handler1.ashx",
+                    //contentType: "application/json;charset=utf-8",
+                    data: { "arr": JSON.stringify(arr1) },
+                    //traditional:true,
+                    success: function (data) {
+                        //我这样写为什么不对？  data不是json格式的吗？
+                        //原因：我从后台返回的是  一个json格式的字符串，想要data.cm 来获取数据  需要先通过parseJSON 方法转换成json数据
+                        //然后才可以  data.cm  这样来调用
+                        //var data = $.parseJSON(data);
+                        //alert(data.cm);
+                        //var json = { "id": "10086", "uname": "zhangsan", "email": "zhangsan@qq.com" };
+                        //json = eval(json);
+                        //alert("===json:id=" + json.id + ",uname=" + json.uname + ",email=" + json.email);
+
+                        alert(data);
+                    },
+                    error: function () {
+                        alert('失败');
+                    }
+                })
+            })
+        })
+    </script>
+</head>
+<body>
+    <input type="button" id="btn"  name="name" value="点我啊" />
+</body>
+</html>

@@ -1,0 +1,16 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>child</title>
+    <script type="text/javascript">
+        function modify() {
+            opener.parentPara = 'child';
+        }
+    </script>
+</head>
+<body>
+    <button onclick="opener.parentFunction()">调用父页面的方法</button>
+    <button onclick="modify()">修改父页面变量的值</button>
+</body>
+</html>

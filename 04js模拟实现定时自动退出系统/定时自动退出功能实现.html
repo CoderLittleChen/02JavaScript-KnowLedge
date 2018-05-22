@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <meta charset="utf-8" />
+    <script src="scripts/jquery-3.3.1.js"></script>
+    <script type="text/javascript">
+        //打开页面   这里的关键是监听到的是mousedown事件
+        var limitFreeMinutes = 1 / 6;
+        var second = 0;
+        var timer_CheckFree = null;
+        $(function () {
+            timer_CheckFree = setInterval(CheckFree_Operate, 1000);
+        })
+        function CheckFree_Operate() {
+            $('#body').click(function () {
+                second = 0;
+            })
+            if (second >= limitFreeMinutes * 60) {
+                alert("haha ");
+                clearInterval(timer_CheckFree);
+            }
+            else {
+                second++;
+                $('#span').html(second + "/" + limitFreeMinutes * 60);
+            }
+
+        }
+
+    </script>
+</head>
+<body style="background-color:cyan" id="body">
+    <input type="button" id="btn" name="name" value="点我啊" />
+    <div>
+        计时：
+        <span id="span">
+
+        </span>
+    </div>
+</body>
+</html>

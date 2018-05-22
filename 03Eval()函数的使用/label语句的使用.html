@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+	<meta charset="utf-8" />
+    <script type="text/javascript">
+        //使用label语句可以在javascript中添加标签以便将来使用
+        //label语法：
+        //label:statement  label经常和break  continue 来使用
+        //通过break label  可以直接跳出多层循环
+
+        var temp = 0;
+        start:
+            for (var i = 0; i < 5; i++) {
+                for (var m = 0; m < 5; m++) {
+                    if (m==1) {
+                        break start;
+                    }
+                    temp++;
+                }
+            }
+        alert(temp);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

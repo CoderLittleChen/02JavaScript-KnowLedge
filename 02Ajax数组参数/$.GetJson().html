@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <meta charset="utf-8" />
+    <script src="scripts/jquery-3.3.1.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            //数组格式的json
+            //var arr = [];
+            //arr.push(111);
+            //arr.push(222);
+            //arr.push(false);
+            //arr.push("测试");
+
+
+            //对象格式的json
+            var obj =
+            {
+                "cm":
+                    {
+                        "name": "cmm",
+                        "age": 18
+                    }
+            }
+
+            //通过getJson来获取后台数据                         { "cm": JSON.stringify(arr) }        '{ "name": "cmmmc" }'
+            $('#btn').click(function () {
+                $.getJSON("Handler1.ashx", { "cm": JSON.stringify(obj) }, function (data) {
+                    //如果确定返回的是 json字符串，就可以直接用$.getJson来获取  可以直接拿到json对象 不需要parse转换
+                    //var data = $.parseJSON(data);
+                    //var data=JSON.parse(data);
+                    alert(data.cm.age);
+                })
+            })
+        })
+
+    </script>
+</head>
+<body>
+    <input type="button" id="btn" name="name" value="点我啊" />
+</body>
+</html>

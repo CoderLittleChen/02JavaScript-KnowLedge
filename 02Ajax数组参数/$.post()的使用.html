@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+	<meta charset="utf-8" />
+    <script src="scripts/jquery-3.3.1.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            //股份公司就是硬件公司
+            //post方法来实现ajax
+
+             //数组格式的json
+            var arr = [];
+            arr.push(111);
+            arr.push(222);
+            arr.push(false);
+            arr.push("测试");
+
+
+            //对象格式的json
+            //var obj =
+            //{
+            //    "cm":
+            //        {
+            //            "name": "cmm",
+            //            "age": 18
+            //        }
+            //}
+
+            $('#btn').click(function () {
+                $.post('Handler1.ashx', { "cm": JSON.stringify(arr) }, function (data) {
+                    var data = $.parseJSON(data);
+                    alert(data[1]);
+                })
+            })
+        })
+    </script>
+</head>
+<body>
+    <input type="button" id="btn" name="name" value="点我啊" />
+</body>
+</html>

@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <meta charset="utf-8" />
+    <script src="scripts/jquery-3.3.1.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            //eval()函数的参数是一个字符串，如果字符串是一个表达式，eval会对表达式求值
+
+            //测试
+            //var str = "alert('hello word')";
+            //eval(str);
+
+
+            //var json = '{"name":"cm","age",10}';
+            //var a = eval(json);
+            //console.log(a);
+
+            //这里的name不加双引号  正常，加了会报错是为什么？
+            var json = '{"name":"cm","age":18}';
+            var a = eval(json);
+            console.log(a);
+
+
+            //eval函数操作json正确使用方法
+            //加个（）会把语句转换成表达式，括号中的代码都会转换成表达式 求值并且返回  
+            //表达式永远有一个返回值
+
+            //这里我json是以{}的方式开始和结束的，在js中，它会被当成一个语句块处理，所以必须强制性的将其转换成表达式
+            //加上()的目的是迫使 eval函数在处理javascript代码的时候强制将括号内的表达式转换为对象，而不是作为语句来执行
+
+            //var json = '{"name":"cm","age":10}';
+            //var obj = eval('(' + json + ')');
+            //console.log(obj.age);
+        })
+    </script>
+</head>
+<body>
+
+</body>
+</html>
