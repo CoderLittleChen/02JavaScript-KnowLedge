@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="jquery-3.3.1.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            var cboxList = $('input[name="name"]');
+            $('#SelectAll').click(function () {
+                if ($(this).is(":checked")) {
+                    //alert('OK');
+                    cboxList.prop('checked', true);
+                    //这里不要用attr来实现，有bug
+                    //cboxList.attr('checked', 'checked');
+                }
+                else {
+                    cboxList.prop('checked', false);
+                }
+            })
+        })
+    </script>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>
+                <input type="checkbox" id="SelectAll" name="SelectAll" value="" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="checkbox" name="name" value="" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="checkbox" name="name" value="" />
+            </td>
+        <tr>
+            <td>
+                <input type="checkbox" name="name" value="" />
+            </td>
+        <tr>
+            <td>
+                <input type="checkbox" name="name" value="" />
+            </td>
+        <tr>
+            <td>
+                <input type="checkbox" name="name" value="" />
+            </td>
+        <tr>
+            <td>
+                <input type="checkbox" name="name" value="" />
+            </td>
+        <tr>
+            <td>
+                <input type="checkbox" name="name" value="" />
+            </td>
+        <tr>
+            <td>
+                <input type="checkbox" name="name" value="" />
+            </td>
+        </tr>
+        </tr>
+        </tr>
+        </tr>
+        </tr>
+        </tr>
+        </tr>
+    </table>
+</body>
+</html>

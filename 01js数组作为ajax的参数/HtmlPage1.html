@@ -27,7 +27,7 @@
                 //$.ajax({ 
                 //    type: "post",
                 //    url: "Handler1.ashx",
-                //    //注意这里contentType  指的是后台返回来的数据
+                //    //注意这里contentType  指的是后台返回来的数据格式  
                 //    //contentType: "application/json;charset=utf-8",
                 //    //这里的JSON.stringify 方法是把json数组 转换为json字符串
                 //    data: { "param": "dsad" },
@@ -53,7 +53,7 @@
                     type: "post",
                     dataType:"text",
                     url: "Handler1.ashx",
-                    data: { "cm": "ccc" },
+                    data: { cm: "ccc" },
                     success: function (data) {
                         alert(data);
                     },
