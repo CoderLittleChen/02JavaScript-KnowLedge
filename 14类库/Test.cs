@@ -8,6 +8,10 @@ namespace _14类库
 {
     public class Test
     {
+        public Test()
+        {
+            Id = 10;
+        }
         public void Show()
         {
             Console.WriteLine("就是测试一下啊");

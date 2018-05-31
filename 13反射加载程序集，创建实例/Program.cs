@@ -1,4 +1,5 @@
-﻿using System;
+﻿using _14类库;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -34,6 +35,9 @@ namespace _13反射加载程序集_创建实例
             if (assembly != null)
             {
                 object obj = assembly.CreateInstance("_14类库.Test");
+                Test test = obj as Test;
+                Console.WriteLine(test.Id);
+
                 Console.WriteLine("OK");
             }
             else
