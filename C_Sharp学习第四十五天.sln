@@ -27,6 +27,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "11attr和prop的区别", "1
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "12js实现计算器效果", "12js实现计算器效果\12js实现计算器效果.csproj", "{ABF8EB6A-375C-401D-82E0-0ED23FEFA667}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "13反射加载程序集，创建实例", "13反射加载程序集，创建实例\13反射加载程序集，创建实例.csproj", "{9619ABB9-EF31-4B40-B5B7-098AF9E40BA2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "14类库", "14类库\14类库.csproj", "{13B59DC8-2B3D-452C-98DB-483D2ADD3CB1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -81,6 +85,14 @@ Global
 		{ABF8EB6A-375C-401D-82E0-0ED23FEFA667}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ABF8EB6A-375C-401D-82E0-0ED23FEFA667}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ABF8EB6A-375C-401D-82E0-0ED23FEFA667}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9619ABB9-EF31-4B40-B5B7-098AF9E40BA2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9619ABB9-EF31-4B40-B5B7-098AF9E40BA2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9619ABB9-EF31-4B40-B5B7-098AF9E40BA2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9619ABB9-EF31-4B40-B5B7-098AF9E40BA2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{13B59DC8-2B3D-452C-98DB-483D2ADD3CB1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{13B59DC8-2B3D-452C-98DB-483D2ADD3CB1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{13B59DC8-2B3D-452C-98DB-483D2ADD3CB1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{13B59DC8-2B3D-452C-98DB-483D2ADD3CB1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
