@@ -16,31 +16,43 @@
             //var json = { name: "cm", age: 18 };
 
             $('#btn').click(function () {
+                //$.ajax({
+                //    type: "post",
+                //    url: "Handler1.ashx",
+                //    data: { cm: JSON.stringify(arr) },
+                //    success: function (data) {
+                //        if (data != null && data != "") {
+                //            //后台传过来的参数必须是数组格式的字符串  [111,222]   或者是{[111,222]}
+                //            //这样通过JSON.parse() 函数才能转换成json对象
+                //            alert(data);
+                //            //这里可以用parse函数  也可以用eval来转换
+                //            var json = JSON.parse(data);
+                //            //var a = eval("(" + data + ")");
+
+                //            //我后台传一个数组(通过JsonConvert转换之后)  前台接收到的是数组字符串 [111,222]
+                //            //需要转换成json来处理
+
+                //            //json的几种数据格式  
+                //            //键值对       "name":"cm"
+                //            //对象          json对象保存在{}中，其中可以包含多个键值对  例：{"name":"cm","age":18}
+                //            //数组          在json中的数组和对象可以相互调用  
+                //            alert(json[1]);
+                //        }
+                //    },
+                //    error: function () {
+                //        alert("错误");
+                //    }
+                //})
+
                 $.ajax({
                     type: "post",
                     url: "Handler1.ashx",
-                    data: { cm: JSON.stringify(arr) },
+                    data: { cm: "ccc" },
                     success: function (data) {
-                        if (data != null && data != "") {
-                            //后台传过来的参数必须是数组格式的字符串  [111,222]   或者是{[111,222]}
-                            //这样通过JSON.parse() 函数才能转换成json对象
-                            alert(data);
-                            //这里可以用parse函数  也可以用eval来转换
-                            var json = JSON.parse(data);
-                            //var a = eval("(" + data + ")");
-
-                            //我后台传一个数组(通过JsonConvert转换之后)  前台接收到的是数组字符串 [111,222]
-                            //需要转换成json来处理
-
-                            //json的几种数据格式  
-                            //键值对       "name":"cm"
-                            //对象          json对象保存在{}中，其中可以包含多个键值对  例：{"name":"cm","age":18}
-                            //数组          在json中的数组和对象可以相互调用  
-                            alert(json[1]);
-                        }
+                        alert(data);
                     },
                     error: function () {
-                        alert("错误");
+                        alert('False');
                     }
                 })
             })

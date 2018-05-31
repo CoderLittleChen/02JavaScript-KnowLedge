@@ -4,7 +4,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title></title>
     <meta charset="utf-8" />
-    <script src="scripts/jquery-3.3.1.js"></script>
+    <script src="jquery-3.3.1.js"></script>
     <script type="text/javascript">
         $(function () {
             //var arr = new Array();
@@ -21,13 +21,13 @@
             //arr1.push(222);
             //arr1.push("333");
             //arr1.push(false);
-            
+
             $('#btn').click(function () {
                 //执行ajax
-                //$.ajax({ 
+                //$.ajax({
                 //    type: "post",
                 //    url: "Handler1.ashx",
-                //    //注意这里contentType  指的是后台返回来的数据格式  
+                //    //注意这里contentType  指的是后台返回来的数据格式
                 //    //contentType: "application/json;charset=utf-8",
                 //    //这里的JSON.stringify 方法是把json数组 转换为json字符串
                 //    data: { "param": "dsad" },
@@ -51,19 +51,19 @@
 
                 $.ajax({
                     type: "post",
-                    dataType:"text",
+                    //dataType:"text",
                     url: "Handler1.ashx",
                     data: { cm: "ccc" },
                     success: function (data) {
                         alert(data);
                     },
-                    error: function () {
-                        alert("错误");
+                    error: function (data) {
+                        alert(data.responseText);
                     }
                 })
 
 
-            })  
+            })
         })
     </script>
 </head>

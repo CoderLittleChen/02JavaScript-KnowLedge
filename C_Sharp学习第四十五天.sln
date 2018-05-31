@@ -25,6 +25,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "10JavaScript子窗口调用
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "11attr和prop的区别", "11attr和prop的区别\11attr和prop的区别.csproj", "{FD965814-92C7-4E56-AA01-973A75514184}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "12js实现计算器效果", "12js实现计算器效果\12js实现计算器效果.csproj", "{ABF8EB6A-375C-401D-82E0-0ED23FEFA667}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -75,6 +77,10 @@ Global
 		{FD965814-92C7-4E56-AA01-973A75514184}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FD965814-92C7-4E56-AA01-973A75514184}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FD965814-92C7-4E56-AA01-973A75514184}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ABF8EB6A-375C-401D-82E0-0ED23FEFA667}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ABF8EB6A-375C-401D-82E0-0ED23FEFA667}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ABF8EB6A-375C-401D-82E0-0ED23FEFA667}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ABF8EB6A-375C-401D-82E0-0ED23FEFA667}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

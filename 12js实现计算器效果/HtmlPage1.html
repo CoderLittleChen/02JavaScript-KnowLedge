@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="jquery-3.3.1.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $('#CalcuBtn').click(function () {
+                var result;
+                //判断输入是否为数字 正则匹配   ^cm表示匹配以cm开头的文本
+                var regex = /^[\d]+$/;
+                var num1 = $('#num1').val();
+                var num2 = $('#num2').val();
+                if (regex.test(num1) && regex.test(num2)) {
+                    //判断操作符
+                    switch ($('select').val()) {
+                        case '+':
+                            result = Number(num1) + Number(num2);
+                            break;
+                        case '-':
+                            result = Number(num1) - Number(num2);
+                            break;
+                        case '*':
+                            result = Number(num1) * Number(num2);
+                            break;
+                        case '/':
+                            if (num2 == 0) {
+                                alert('除数不能为0，请重新输入！！');
+                                $('#result').val('');
+                                return;
+                            }
+                            else {
+                                result = Number(num1) / Number(num2);
+                            }
+                            break;
+                    }
+                    $('#result').val(result);
+                }
+                else {
+                    alert('您的输入包含非数字，请重新输入');
+                    $('#result').val('');
+                }
+                //判断操作符号
+
+            })
+        })
+    </script>
+</head>
+<body>
+    <input id="num1" type="text" style="width:50px;height:20px" name="name" value="" />
+    <select style="width:50px;height:26px">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+    </select>
+    <input id="num2" type="text" style="width:50px;height:20px" name="name" value="" />
+    <input id="CalcuBtn" type="button" style="width:50px;height:20px" name="name" value="=" />
+    <input id="result" type="text" style="width:50px;height:20px" name="name" value="" />
+</body>
+</html>
