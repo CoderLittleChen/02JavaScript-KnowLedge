@@ -11,6 +11,7 @@ namespace _14类库
         public Test()
         {
             Id = 10;
+            Name = "张三";
         }
         public void Show()
         {

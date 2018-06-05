@@ -34,12 +34,14 @@ namespace _13反射加载程序集_创建实例
             Assembly assembly = Assembly.Load("14类库");
             if (assembly != null)
             {
+                //这里创建实例 注意是命名空间+类名     有数字的话 前面要加上  _
                 object obj = assembly.CreateInstance("_14类库.Test");
+                //这里如果想要 将obj转换为程序集中的Test类对象 需要添加对其项目的引用 然后才能转换 否则需要添加引用
                 Test test = obj as Test;
+                Console.WriteLine(test.Name);
                 Console.WriteLine(test.Id);
-
-                Console.WriteLine("OK");
-            }
+                Console.WriteLine("OK");  
+            }  
             else
             {
                 Console.WriteLine("False");
