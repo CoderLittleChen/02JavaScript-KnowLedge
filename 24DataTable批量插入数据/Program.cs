@@ -21,9 +21,9 @@ namespace _24DataTable批量插入数据
             //这样才能批量插入    
             
             //当触发器包含多种触发类型   怎样判断当前执行的是什么操作？
-            //如果有inserted   有deleted     说明是Update操作
-            //有inserted    没有deleted       说明是Insert操作
-
+            //有inserted         有deleted          说明是Update操作
+            //有inserted         没有deleted       说明是Insert操作
+            //没有inserted      有deleted          说明是deleted操作 
 
             //先新建一个DataTable       
             DataTable dataTable = new DataTable();
@@ -49,14 +49,15 @@ namespace _24DataTable批量插入数据
                 {
                     con.Open();
                     //这里注意当使用SqlBulkCopy来插入数据的时候，若是想要调用表中的触发器
-                    //需要将SqlBulkCopyOptions 属性设置为FireTrigger
+                    //需要将SqlBulkCopyOptions 属性设置为FireTrigger   插入数据的时候  允许调用触发器    
+                    //不过批量插入    insert触发器也只执行一次     对应的inserted可以是一行数据，也可以是一个结果集（批量插入的数据）
                     using (SqlBulkCopy bulkCopy = new SqlBulkCopy(con, SqlBulkCopyOptions.FireTriggers, null))
                     {
                         //设置对应数据库的物理表名      TestTableForBatchInsert
                         bulkCopy.DestinationTableName = "TestTableForBatchInsert";
-                        //BatchSize  一次事务插入的数据
+                        //BatchSize  一次事务插入的数据    
                         bulkCopy.BatchSize = dataTable.Rows.Count;
-                        //超时时间设置
+                        //超时时间设置   单位是秒
                         bulkCopy.BulkCopyTimeout = 12 * 60 * 60;
                         //数据源中的列名与目标表字段的映射关系    
                         bulkCopy.ColumnMappings.Add("Id", "Id");
