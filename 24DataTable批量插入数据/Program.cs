@@ -23,11 +23,9 @@ namespace _24DataTable批量插入数据
             //当触发器包含多种触发类型   怎样判断当前执行的是什么操作？
             //如果有inserted   有deleted     说明是Update操作
             //有inserted    没有deleted       说明是Insert操作
-            //
 
 
-
-            //先新建一个DataTable       我们一起学猫叫
+            //先新建一个DataTable       
             DataTable dataTable = new DataTable();
             dataTable.Columns.Add("Id", typeof(int));
             dataTable.Columns.Add("Name", typeof(string));
