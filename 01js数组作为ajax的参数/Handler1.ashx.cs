@@ -12,7 +12,7 @@ namespace _01js数组作为ajax的参数
     {
         public void ProcessRequest(HttpContext context)
         {
-            //context.Response.ContentType = "text/plain";
+            context.Response.ContentType = "text/plain";
             //string name = context.Request["param"];
             ////context.Response.Write("{\"cm\":\"name\"}");
             //context.Response.Write(name);

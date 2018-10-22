@@ -1,0 +1,5 @@
+﻿Ajax中注意事项：
+1、json数据从前台传到后台，键和值最好是字符串，值不是字符串可以用JSON.stringify()方法来转换成字符串格式
+2、如果前台的值为json嵌套json，或者json嵌套数组格式的json，这样后台根据key值接收的时候，会导致数据接收不到，值为Null,需要转换成json格式的字符串
+3、后台接收到数据以后，可以通过JavaScriptSerialize类把json字符串转换成相应对象（数组格式的json不行）
+4、后台进行一系列处理之后，转换成json字符串，前台根据jsonObj.Key来获取对应的Value值。  

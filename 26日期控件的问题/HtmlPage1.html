@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="jquery-3.3.1.js"></script>
+    <script src="My97DatePicker/My97DatePicker/WdatePicker.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            //实现要求   txt2的开始时间为txt1中选择的时间
+            //这里是可以实现的   项目为什么有问题？
+            $('#txt1').click(function () {
+                WdatePicker({
+                    //el: this,
+                });
+            })
+
+            $('#txt2').click(function () {
+                var txt1Value = $('#txt1').val();
+                WdatePicker({
+                    //el: this,
+                    minDate: txt1Value,
+                    maxDate: '2018-10-22  10:30'
+                });
+            })
+        })
+    </script>
+</head>
+<body>
+    <input type="text" id="txt1" name="name" value="" />
+    <input type="text" id="txt2" name="name" value="" />
+</body>
+</html>

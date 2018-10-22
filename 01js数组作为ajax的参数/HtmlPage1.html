@@ -38,11 +38,13 @@
                 //        //然后才可以  data.cm  这样来调用
                 //        //var data = $.parseJSON(data);
                 //        //alert(data.cm);
-                //        //var json = { "id": "10086", "uname": "zhangsan", "email": "zhangsan@qq.com" };
+                //        var json = { "id": "10086", "uname": "zhangsan", "email": "zhangsan@qq.com" };
                 //        //json = eval(json);
+                //        alert(json.id);
+
                 //        //alert("===json:id=" + json.id + ",uname=" + json.uname + ",email=" + json.email);
 
-                //        alert(data);
+                //        //alert(data);
                 //    },
                 //    error: function () {
                 //        alert('失败');
@@ -51,7 +53,8 @@
 
                 $.ajax({
                     type: "post",
-                    //dataType:"text",
+                    //这里一定要注意dataType指的是从后台返回的数据类型
+                    dataType:"text",
                     url: "Handler1.ashx",
                     data: { cm: "ccc" },
                     success: function (data) {

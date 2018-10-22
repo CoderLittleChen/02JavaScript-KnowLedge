@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="scripts/jquery-3.3.1.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            var str1 = '2018-07-31 17:06';
+            var str2 = '2018-07-29 12:06';
+            var days = CalculatorDays(str1, str2);
+            alert(days);
+        })
+        function CalculatorDays(str1, str2) {
+            //2018-03-09 13:19
+            //str1 = str1.substring(0, 10);
+            //str2 = str2.substring(0, 10);
+            //注意这里返回的是1970/1/1 到当前时间的毫秒数 所以除以1000
+            var date1 = Date.parse(new Date(str1));
+            var date2 = Date.parse(new Date(str2));
+            var days = Math.abs((date1 - date2) / 1000 / 3600 / 24);
+            //先判断days是否为小数
+            if (days.toString().indexOf('.') > 0) {
+                //是小数  先拆分
+                days = days.toFixed(2);
+                var arr = days.toString().split('.');
+                var decimal = (days - Number(arr[0])).toFixed(2);
+                if (decimal < 0.5) {
+                    return (Number(arr[0]) + 0.5).toString();
+                }
+                else {
+                    return (Number(arr[0]) + 1.0).toString();
+                }
+            }
+            return days;
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

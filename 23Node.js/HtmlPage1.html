@@ -1,0 +1,110 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script type="text/javascript">
+        window.onload = function () {
+            //var date1 = '6.13';
+            //var index = date1.indexOf('.');
+            //var date2 = date1.substring(index + 1, index + 2);
+            //var date3 = date1.substring(0, index);
+            //var date4 = '6.3';
+            //alert(date2);
+            //alert(date3);
+            //alert(Number(date4).toFixed(2));
+            //alert(Number(11) - Number(08));
+
+            //var date = '2018-08-01 16:35';
+            //var index = date.indexOf(':');
+            //var min = date.substring(index + 1, index + 3);
+            //alert(min);
+
+            //alert(FormatEndDate('2018-08-01 16:05'));
+
+            //var date = '2018-08-01 16:30';
+            //var tempDate = date.substring(0, 10);
+            //var date1 = tempDate + ' 18:00';
+            //var duration = (Date.parse(date1) - Date.parse(date)) / 1000 / 3600;
+            //alert(duration);
+
+
+            //var str = GetDurByStartDateAndEndDate('2018-08-01 16:40', '2018-08-01 16:35');
+            //alert(str);
+            var ss = Date.parse('2018-08-01 16:30') - Date.parse('2018-08-01 19:30');
+            alert(ss);
+
+
+        }
+
+        function GetDurByStartDateAndEndDate(startDate, endDate) {
+            //2018-08-01 16:35
+            //格式化开始时间
+            var index1 = startDate.indexOf(':');
+            var strDate = startDate.substring(0, 10);
+            var strHour = startDate.substring(11, 13);
+            var minStart = startDate.substring(index1 + 1, index1 + 3);
+            var min1 = '';
+            if (Number(minStart) > 30) {
+                var num = Number(strHour) + 1;
+                if (Number(num) < 10) {
+                    strHour = "0" + num.toString();
+                    min1 = '00';
+                }
+                else {
+                    strHour = num;
+                    min1 = '00';
+                }
+
+
+            }
+            else if (Number(minStart) < 30) {
+                min1 = '30';
+            }
+            //格式化日期  16:35→17:00   16:15→16:30
+            startDate = strDate + " " + strHour + ":" + min1;
+            return startDate;
+
+            ////格式化结束时间
+            //var index2 = startDate.indexOf(':');
+            //var str2 = startDate.substring(0, index);
+            //var minEnd = startDate.substring(index + 1, index + 3);
+            //var min2 = '';
+            //if (Number(minEnd) > 30) {
+            //    min2 = '30';
+            //}
+            //else if (Number(minEnd) < 30) {
+            //    min2 = '00';
+            //}
+            ////格式化日期  16:35→16:30   16:15→16:00
+            //endDate = str2 + ":" + min2;
+
+            //var duration = (Date.parse(endDate) - Date.parse(date)) / 1000 / 3600;
+            //return duration;
+
+        }
+
+
+
+        function FormatEndDate(date) {
+            //2018-08-01 16:35
+            var index = date.indexOf(':');
+            var str1 = date.substring(0, index);
+            var min = date.substring(index + 1, index + 3);
+            var min1 = '';
+            if (Number(min) > 30) {
+                min1 = '30';
+            }
+            else if (Number(min) < 30) {
+                min1 = '00';
+            }
+            date = str1 + ":" + min1;
+            return date;
+        }
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

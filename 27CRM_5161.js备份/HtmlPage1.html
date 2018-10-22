@@ -1,0 +1,83 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="jquery-3.3.1.js"></script>
+    <script type="text/javascript">
+        $(function () {
+
+
+            //计算时长   修改版
+            function Calculator() {
+                //定时执行
+                setInterval(function () {
+                    //类型改变事件   
+                    var typeObj = $('input[id^="txtDe_28401"]');
+                    //alert(typeObj.length);
+                    for (var i = 0; i < typeObj.length; i++) {
+                        var id = $(typeObj[i]).attr('id');
+                        document.getElementById(id).onchange = function () {
+                            var StartDate = $(this).parent().parent().find('input[id^="txtDe_28402"]').val();
+                            var EndDate = $(this).parent().parent().find('input[id^="txtDe_28403"]').val();
+                            var durationObj = $(this).parent().parent().find('input[id^="txtDe_28407"]');
+                            if (StartDate == '' || EndDate == '') {
+                                $(durationObj).val(0);
+                            }
+                            else {
+                                var days = CalculateHours(StartDate, EndDate, $(this).val());
+                                $(durationObj).val(days);
+                            }
+                            //AddRow_Before();
+                        }
+                    }
+
+                    //计算请假总时长  
+                    //先拿到所有的时长    
+                    var durationObj = $('input[id^="txtDe_28407"]');
+                    var durationValue;
+                    var sumDuration = 0;
+                    for (var i = 0; i < durationObj.length; i++) {
+                        //这里还要先将单位为天的假期  转换成小时，相加之后除以8
+                        var type = $(durationObj[i]).parent().parent().find('input[id^="txtDe_28401"]').val();
+                        durationValue = $(durationObj[i]).val();
+                        if (type.indexOf('天') > 0) {
+                            sumDuration += Number(durationValue) * 8;
+                        }
+                        else {
+                            sumDuration += Number(durationValue);
+                        }
+                    }
+                    //保留两位小数     
+                    $('#De_29106').val((sumDuration / 8).toFixed(2));
+
+                    var arrStartDateObj = $('input[id^="txtDe_28402"]');
+                    var arrEndDateObj = $('input[id^="txtDe_28403"]');
+
+                    //限制结束日期的选择范围  
+                    for (var i = 1; i < arrEndDateObj.length - 1; i++) {
+                        $(arrEndDateObj[i]).attr("onfocus", "");
+                        var id = $(arrEndDateObj[i]).attr('id');
+                        document.getElementById(id).onfocus = function () {
+                            var minDate = $(this).parent().parent().find('input[id^="txtDe_28402"]').val();
+                            WdatePicker({
+                                dateFmt: "yyyy-MM-dd HH:mm",
+                                //startDate: minDate,
+                                minDate: minDate,
+                                maxDate: '2018-10-18  15:00'
+                            });
+                        }
+                    }
+                }, 1000);
+            }
+
+
+
+        })
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

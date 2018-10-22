@@ -17,21 +17,20 @@
 
             //对象格式的json
             var obj =
-            {
-                "cm":
-                    {
-                        "name": "cmm",
-                        "age": 18
-                    }
-            }
-
+                {
+                    "cm":
+                        {
+                            "name": "cmm",
+                            "age": 18
+                        }
+                }
             //通过getJson来获取后台数据                         { "cm": JSON.stringify(arr) }        '{ "name": "cmmmc" }'
             $('#btn').click(function () {
                 $.getJSON("Handler1.ashx", { "cm": JSON.stringify(obj) }, function (data) {
                     //如果确定返回的是 json字符串，就可以直接用$.getJson来获取  可以直接拿到json对象 不需要parse转换
                     //var data = $.parseJSON(data);
                     //var data=JSON.parse(data);
-                    alert(data.cm.age);
+                    alert(data.cm.name);
                 })
             })
         })

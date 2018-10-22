@@ -21,7 +21,7 @@ namespace _07测试数据库连接
 
         private void button1_Click(object sender, EventArgs e)
         {
-            //点击按钮   打开数据库连接 测试是否成功
+            //点击按钮   打开数据库连接 测试是否成功    Integrated   Security     
             string conStr = "Server=CM;Database=Demo;Integrated Security=true";
             //string conStr=""
             using (SqlConnection con = new SqlConnection(conStr))
