@@ -105,13 +105,20 @@ namespace _20保留小数
             //List<string> list = new List<string>() { "张三", "李四" }; 
 
 
-            string str1 = "2018-09-09";   
-            string str2 = "2018-09-12";
-            DateTime dateTime1 = Convert.ToDateTime(str1);
-            DateTime dateTime2 = Convert.ToDateTime(str2);
-            //这种计算日期的方式    算出来是9  10  11，3天，和直接相减的结果是一致的
-            int days = (dateTime2 - dateTime1).Days;
-            Console.WriteLine(days);
+            //string str1 = "2018-09-09";   
+            //string str2 = "2018-09-12";
+            //DateTime dateTime1 = Convert.ToDateTime(str1);
+            //DateTime dateTime2 = Convert.ToDateTime(str2);
+            ////这种计算日期的方式    算出来是9  10  11，3天，和直接相减的结果是一致的
+            //int days = (dateTime2 - dateTime1).Days;
+            //Console.WriteLine(days);
+
+
+            Console.WriteLine(11>2?"哈哈哈":"呵呵呵");
+            //object a = null;
+            //string str = a.ToString();
+            //Console.WriteLine(a);
+
 
             Console.ReadKey();
 
