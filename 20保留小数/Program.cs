@@ -114,14 +114,30 @@ namespace _20保留小数
             //Console.WriteLine(days);
 
 
-            Console.WriteLine(11>2?"哈哈哈":"呵呵呵");
+            //Console.WriteLine(11 > 2 ? "哈哈哈" : "呵呵呵");
             //object a = null;
             //string str = a.ToString();
             //Console.WriteLine(a);
+
+            //DateTime d1 = Convert.ToDateTime("2018-10-23 08:30:00.000");
+            //DateTime d2 = Convert.ToDateTime("2018-10-23 18:00:00.000");
+            //double  duration=time(d1,d2);
+
+            //Console.WriteLine(DateTime.Now.Month - 1);
+
+            //DateTime d1 = DateTime.Now.AddDays(1 - DateTime.Now.Day).AddMonths(1).AddDays(-1);
+            //Console.WriteLine(d1);
+
+            int n = DateTime.Now.Day;
+            Console.WriteLine(n);
 
 
             Console.ReadKey();
 
         }
+
+
+
+
     }
 }

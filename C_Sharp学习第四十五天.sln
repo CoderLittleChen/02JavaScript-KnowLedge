@@ -57,6 +57,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "18日期问题", "18日期�
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "27CRM_5161.js备份", "27CRM_5161.js备份\27CRM_5161.js备份.csproj", "{4BCF3EA9-5C88-4B6A-903C-3A900FAFBDC3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "28CRM日期计算方法", "28CRM日期计算方法\28CRM日期计算方法.csproj", "{8170ECEC-8C50-4886-8BFD-2BC4707952F2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "29反射", "29反射\29反射.csproj", "{0ED8FA78-8FEF-4B7C-B90D-51F6108A8376}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -281,6 +285,22 @@ Global
 		{4BCF3EA9-5C88-4B6A-903C-3A900FAFBDC3}.Release|Any CPU.Build.0 = Release|Any CPU
 		{4BCF3EA9-5C88-4B6A-903C-3A900FAFBDC3}.Release|x86.ActiveCfg = Release|Any CPU
 		{4BCF3EA9-5C88-4B6A-903C-3A900FAFBDC3}.Release|x86.Build.0 = Release|Any CPU
+		{8170ECEC-8C50-4886-8BFD-2BC4707952F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8170ECEC-8C50-4886-8BFD-2BC4707952F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8170ECEC-8C50-4886-8BFD-2BC4707952F2}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{8170ECEC-8C50-4886-8BFD-2BC4707952F2}.Debug|x86.Build.0 = Debug|Any CPU
+		{8170ECEC-8C50-4886-8BFD-2BC4707952F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8170ECEC-8C50-4886-8BFD-2BC4707952F2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8170ECEC-8C50-4886-8BFD-2BC4707952F2}.Release|x86.ActiveCfg = Release|Any CPU
+		{8170ECEC-8C50-4886-8BFD-2BC4707952F2}.Release|x86.Build.0 = Release|Any CPU
+		{0ED8FA78-8FEF-4B7C-B90D-51F6108A8376}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0ED8FA78-8FEF-4B7C-B90D-51F6108A8376}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0ED8FA78-8FEF-4B7C-B90D-51F6108A8376}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{0ED8FA78-8FEF-4B7C-B90D-51F6108A8376}.Debug|x86.Build.0 = Debug|Any CPU
+		{0ED8FA78-8FEF-4B7C-B90D-51F6108A8376}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0ED8FA78-8FEF-4B7C-B90D-51F6108A8376}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0ED8FA78-8FEF-4B7C-B90D-51F6108A8376}.Release|x86.ActiveCfg = Release|Any CPU
+		{0ED8FA78-8FEF-4B7C-B90D-51F6108A8376}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
