@@ -6,8 +6,26 @@
     <script src="jquery-3.3.1.js"></script>
     <script type="text/javascript">
         $(function () {
-            var ss = '2018-08-28 08:36';
-            alert(ss.substring(0, 10));
+            //var ss = '2018-08-28 08:36';
+            //alert(ss.substring(0, 10));
+
+            //这是为什么啊？     
+            //var obj = 'Hello  World';
+            //alert(obj.indexOf('W'));
+
+            //if (obj.indexOf('哺乳假') > 0) {
+            //    alert(11);
+            //}
+            //else {
+            //    alert(22);
+            //}
+
+            var arr = ['病假', '事假', '哺乳假'];
+            var str = '事11假';
+            var result = $.inArray(str, arr);
+            alert(result);
+
+
         })
     </script>
 </head>

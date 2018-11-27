@@ -61,6 +61,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "28CRM日期计算方法", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "29反射", "29反射\29反射.csproj", "{0ED8FA78-8FEF-4B7C-B90D-51F6108A8376}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "30字段联系判断", "30字段联系判断\30字段联系判断.csproj", "{958D373C-5FEE-4581-9A37-26A9F8F1E34A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -301,6 +303,14 @@ Global
 		{0ED8FA78-8FEF-4B7C-B90D-51F6108A8376}.Release|Any CPU.Build.0 = Release|Any CPU
 		{0ED8FA78-8FEF-4B7C-B90D-51F6108A8376}.Release|x86.ActiveCfg = Release|Any CPU
 		{0ED8FA78-8FEF-4B7C-B90D-51F6108A8376}.Release|x86.Build.0 = Release|Any CPU
+		{958D373C-5FEE-4581-9A37-26A9F8F1E34A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{958D373C-5FEE-4581-9A37-26A9F8F1E34A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{958D373C-5FEE-4581-9A37-26A9F8F1E34A}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{958D373C-5FEE-4581-9A37-26A9F8F1E34A}.Debug|x86.Build.0 = Debug|Any CPU
+		{958D373C-5FEE-4581-9A37-26A9F8F1E34A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{958D373C-5FEE-4581-9A37-26A9F8F1E34A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{958D373C-5FEE-4581-9A37-26A9F8F1E34A}.Release|x86.ActiveCfg = Release|Any CPU
+		{958D373C-5FEE-4581-9A37-26A9F8F1E34A}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
