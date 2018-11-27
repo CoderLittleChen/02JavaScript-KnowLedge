@@ -10,7 +10,7 @@ namespace _22BinarySearch
     {
         static void Main(string[] args)
         {
-            int[] array = new int[5] { 2, 11, 39, 46, 77 };
+            int[] array = new int[4] { 2, 11, 39, 46 };
             //首先明确需要的参数   一个是int数组，一个是要查找的元素
             //一定要注意的是   这里要求线性表采用顺序存储结构   表中元素按照关键字有序排列
             //这里是  线性表采用顺序存储结构  表中元素按照有序排列  
