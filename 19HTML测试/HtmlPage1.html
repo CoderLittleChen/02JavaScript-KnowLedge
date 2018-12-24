@@ -6,18 +6,24 @@
     <title></title>
     <script type="text/javascript">
         $(function () {
-            var arr = new Array();
-            arr.push(111);
-            arr.push(2222);
-            alert(arr[0]);
+            //var arr = new Array();
+            //arr.push(111);
+            //arr.push(2222);
+            ////alert(arr[0]);
+
+            //怎样获取当前页面中的tr对象
+
+            var trObjArr = $("tr");
+            alert(trObjArr.length);
+
 
         })
     </script>
 </head>
 <body>
     <table border="1" cellpadding="10" cellspacing="0">
-        <tr style="background-color:cyan;color:white">
-            <td class="sss">dasd</td>
+        <tr>
+            <td style="background-color:red;color:white">dasd</td>
             <td>dasd</td>
             <td>dasd</td>
             <td>dasd</td>

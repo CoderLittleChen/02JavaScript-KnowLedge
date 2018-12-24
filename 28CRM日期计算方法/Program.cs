@@ -10,11 +10,13 @@ namespace _28CRM日期计算方法
     {
         static void Main(string[] args)
         {
-            DateTime dateTime1 = Convert.ToDateTime("2018-09-26 08:07");
-            DateTime dateTime2 = Convert.ToDateTime("2018-09-26 17:30");
+            DateTime dateTime1 = Convert.ToDateTime("2018-09-26 08:17");
+            DateTime dateTime2 = Convert.ToDateTime("2018-09-26 19:40");
             //日期直接相减
-            //Console.WriteLine(dateTime2 - dateTime1);
-            Console.WriteLine(DateTime.Now.AddDays(-5));
+            Console.WriteLine(dateTime2 - dateTime1);
+            //Console.WriteLine(DateTime.Now.AddDays(-5));
+
+            //Console.WriteLine(DateTime.Now.Date.AddYears(-1));
 
             Console.ReadKey();
         }

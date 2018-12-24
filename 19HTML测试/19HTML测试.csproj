@@ -80,6 +80,7 @@
     <Content Include="HtmlPage3.html" />
     <Content Include="HtmlPage4.html" />
     <Content Include="HtmlPage5.html" />
+    <Content Include="HtmlPage6.html" />
     <Content Include="jquery-3.3.1.js" />
     <Content Include="Web.config" />
   </ItemGroup>

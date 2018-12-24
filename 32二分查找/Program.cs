@@ -17,12 +17,19 @@ namespace _32二分查找
 
 
             //二分查找要求线性表必须采用顺序存储结构，且表中元素按照关键字有序排列
-            int[] nums = { 1, 4, 9, 11, 44, 56, 89, 222 };
-            int target = 44;
-            int index = BinarySearch(nums, target);
-            Console.WriteLine(index);
-            Console.ReadKey();  
+            //int[] nums = { 1, 4, 9, 11, 44, 56, 89, 222 };
+            //int target = 44;
+            //int index = BinarySearch(nums, target);
+            //Console.WriteLine(index);
+            //Console.ReadKey();  
 
+
+            string str1 = "2018-10-18 08:29";
+            string str2 = "2018-10-18 17:36";
+            DateTime d1 = Convert.ToDateTime(str1);
+            DateTime d2 = Convert.ToDateTime(str2);
+            Console.WriteLine(d2-d1);
+            Console.ReadKey();
 
         }
 
@@ -54,9 +61,7 @@ namespace _32二分查找
                     left = mid + 1;   
                 }
             }
-
             return -1;
-
         }
 
     }

@@ -73,13 +73,14 @@ namespace _18日期问题
             //DateTime endDate = dateTime.AddDays(1 - dateTime.Day).AddMonths(1).AddDays(-1);
             
             //
-            DateTime dateTime1 = Convert.ToDateTime("2018-10-10");
-            DateTime dateTime2 = Convert.ToDateTime("2018-10-15");
-            for (int i = 0; i < (dateTime2 - dateTime1).Days + 1; i++)
+            DateTime currentDate = Convert.ToDateTime("2018-12-01");
+            DateTime endDate = currentDate.AddDays(1 - currentDate.Day).AddMonths(1).AddDays(-1).Date;
+            for (int j = 0; j < (endDate - currentDate).Days + 1; j++)
             {
-                Console.WriteLine(dateTime1.AddDays(i));
+                Console.WriteLine(currentDate.AddDays(j).Date);
             }
-            Console.WriteLine((dateTime2 - dateTime1).Days);
+            //Console.WriteLine(endDate);
+
             Console.ReadKey();
 
         }
