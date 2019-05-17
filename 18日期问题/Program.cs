@@ -71,15 +71,36 @@ namespace _18日期问题
 
             //DateTime dateTime = DateTime.Now;
             //DateTime endDate = dateTime.AddDays(1 - dateTime.Day).AddMonths(1).AddDays(-1);
-            
-            //
-            DateTime currentDate = Convert.ToDateTime("2018-12-01");
-            DateTime endDate = currentDate.AddDays(1 - currentDate.Day).AddMonths(1).AddDays(-1).Date;
-            for (int j = 0; j < (endDate - currentDate).Days + 1; j++)
-            {
-                Console.WriteLine(currentDate.AddDays(j).Date);
-            }
+
+
+            //DateTime currentDate = Convert.ToDateTime("2018-12-01");
+            //DateTime endDate = currentDate.AddDays(1 - currentDate.Day).AddMonths(1).AddDays(-1).Date;
+            //for (int j = 0; j < (endDate - currentDate).Days + 1; j++)
+            //{
+            //    Console.WriteLine(currentDate.AddDays(j).Date);
+            //}
             //Console.WriteLine(endDate);
+
+            //string str = "12231231";
+            //Console.WriteLine(str.Substring(str.Length - 4, 4));
+
+            //string result = "CW041903121011";
+            //int danNum = Convert.ToInt32(result.Substring(result.Length - 4, 4)) + 1;
+            //result = string.Concat(result.Substring(0, result.Length - 4), danNum.ToString().PadLeft(4, '0'));
+            //Console.WriteLine(result);
+            //Console.WriteLine("CW04+yyMMdd+0001".Replace("+",""));
+
+            //int index = 5;
+            //for (int i = 2; i < 8 + 2; i++)
+            //{
+            //    if (i > index + 2)
+            //    {
+            //        Console.WriteLine(i);
+            //    }
+            //}
+            Console.WriteLine(DateTime.Now.ToString("yyMMdd"));
+
+
 
             Console.ReadKey();
 

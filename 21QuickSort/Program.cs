@@ -11,23 +11,14 @@ namespace _21QuickSort
         static void Main(string[] args)
         {
             int[] array = new int[5] { 11, 2, 39, 46, 77 };
-            Console.WriteLine("-----排序前--------");
-            for (int i = 0; i < array.Length; i++)
-            {
-                Console.Write(array[i] + "  ");
-            }
-            Console.WriteLine();
             array = QuickSort(array);
-            Console.WriteLine("-----排序后--------");
             for (int i = 0; i < array.Length; i++)
             {
                 Console.Write(array[i] + "  ");
             }
-
-            int n = Partition(array, 2, 3);
-            Console.WriteLine(n);
 
             Console.ReadKey();
+
         }
 
         public static int[] QuickSort(int[] array)
@@ -37,6 +28,12 @@ namespace _21QuickSort
         }
 
 
+        /// <summary>
+        /// 快速排序  
+        /// </summary>
+        /// <param name="array">int数组</param>
+        /// <param name="p">0</param>
+        /// <param name="r">数组的长度</param>
         public static void Sort(int[] array, int p, int r)
         {
             int q = 0;
@@ -46,6 +43,7 @@ namespace _21QuickSort
                 Sort(array, p, q - 1);
                 Sort(array, q + 1, r);
             }
+
         }
 
 

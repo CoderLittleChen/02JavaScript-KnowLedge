@@ -128,8 +128,18 @@ namespace _20保留小数
             //DateTime d1 = DateTime.Now.AddDays(1 - DateTime.Now.Day).AddMonths(1).AddDays(-1);
             //Console.WriteLine(d1);
 
-            int n = DateTime.Now.Day;
-            Console.WriteLine(n);
+            //int n = DateTime.Now.Day;
+            //Console.WriteLine(n);
+
+            //string str = string.Format("{0}dsa {1}qweq{1}", "第一个坑", "第二个坑");
+            //Console.WriteLine(str);
+
+
+            //string str = "d";
+            //string[] names = str.Split(',');
+            //Console.WriteLine(names[0]);
+
+            Console.WriteLine(DateTime.Now.AddDays(-7).ToString("yyyy-MM-dd"));
 
 
             Console.ReadKey();

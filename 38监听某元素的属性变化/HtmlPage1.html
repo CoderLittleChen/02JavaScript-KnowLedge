@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>监听某Dom元素的属性值变化  触发事件</title>
+    <script src="Scripts/jquery-3.3.1.js"></script>
+    <script>
+        $(function () {
+            //alert(1);
+            $("#btn1").click(function () {
+                $('#img1').attr("value", "图片1");
+                //$('#div1').text($('#txt1').val());
+
+                alert($('img:eq(0)').attr('ovalue'));
+                alert($('img:eq(0)').attr('value'));
+            });
+
+            //DOMNodeInserted  
+            //监测div中的内容发生变化  
+            $('#div1').on('DOMNodeInserted',function () {
+                var div=$('#div1').text();
+                alert(div);
+            });
+            
+            //怎样监测img对象的属性改变事件
+            $('#img1').bind("oninput", function () {
+                alert(1);
+            })
+             
+
+           
+        });
+    </script>
+</head>
+<body>
+    <input type="text" id="txt1" name="name" value="点我啊" />
+    <img src="#" id="img1" alt="Alternate Text" value="1" />
+    <img src="#" id="img2" alt="Alternate Text" value="2" />
+    <input type="button" id="btn1" name="name" value="按钮" />
+    <div id="div1" style="background-color:cyan">
+        dadsad
+    </div>
+</body>
+</html>
